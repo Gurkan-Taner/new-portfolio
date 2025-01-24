@@ -7,9 +7,7 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
-interface ProjectProps {
-  projects: unknown;
-}
+import ProjectProps from "@/interfaces/project-props";
 
 export default function ProjectCarousel({ projects }: ProjectProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -19,7 +17,6 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
 
   const handleRotate = (direction: string) => {
     const totalProjects = projects.length;
-    console.log(totalProjects);
 
     const newIndex =
       direction === "left"
@@ -28,12 +25,12 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
     setSelectedIndex(newIndex);
   };
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e: MouseEvent) => {
     setIsDragging(true);
     setStartX(e.clientX);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
 
     const deltaX = e.clientX - startX;
@@ -42,10 +39,6 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
       handleRotate(deltaX > 0 ? "left" : "right");
       setStartX(e.clientX);
     }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
   };
 
   useEffect(() => {
@@ -67,7 +60,6 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center gap-4 perspective-1000">
-      {/* Carousel Container */}
       <div
         ref={carouselRef}
         className="relative w-full max-w-4xl h-80 cursor-grab active:cursor-grabbing select-none"
@@ -137,13 +129,11 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
           })}
         </div>
       </div>
-      {projects[selectedIndex]?.description ? (
+      {projects[selectedIndex].description ? (
         <div className="w-[80%] min-h-60 sm:min-h-44 p-2 text-center flex flex-col gap-3">
-          <p className="text-gray-300">
-            {projects[selectedIndex]?.description}
-          </p>
+          <p className="text-gray-300">{projects[selectedIndex].description}</p>
           <div className="flex flex-wrap gap-2 mx-auto justify-center">
-            {projects[selectedIndex]?.technologies.map((techno, index) => {
+            {projects[selectedIndex].technologies.map((techno, index) => {
               return (
                 <Badge
                   key={`${techno} - ${index}`}

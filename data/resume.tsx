@@ -4,7 +4,7 @@ import { HomeIcon } from "lucide-react";
 export const DATA = {
   name: "Gurkan Taner",
   initials: "GT",
-  url: "https://dillion.io",
+  url: "https://gurkan-taner.vercel.app",
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
   description: "Développeur Freelance, passionné par la création et les défis.",
@@ -238,23 +238,23 @@ export const DATA = {
       image: "/coding_games/puissance4.png",
       video: "",
     },
-    // {
-    //   title: "Pong",
-    //   href: "",
-    //   dates: "1 jour",
-    //   active: true,
-    //   description: "",
-    //   technologies: ["C", "Raylib"],
-    //   links: [
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/ScoutHub/pong-raylib",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/coding_games/pong.png",
-    //   video: "",
-    // },
+    {
+      title: "Pong",
+      href: "",
+      dates: "1 jour",
+      active: true,
+      description: "",
+      technologies: ["C", "Raylib"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ScoutHub/pong-raylib",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/coding_games/pong.png",
+      video: "",
+    },
     {
       title: "Space Invader",
       href: "",
@@ -287,6 +287,23 @@ export const DATA = {
         },
       ],
       image: "/coding_games/tictactoe.png",
+      video: "",
+    },
+    {
+      title: "Snake",
+      href: "",
+      dates: "2 jours",
+      active: true,
+      description: "",
+      technologies: ["C", "Raylib"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ScoutHub/CTicTacToe",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/coding_games/snake.png",
       video: "",
     },
   ],

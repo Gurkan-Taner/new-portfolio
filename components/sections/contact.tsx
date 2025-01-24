@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ContactIcon } from "lucide-react";
 import { getCalApi } from "@calcom/embed-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -33,7 +33,7 @@ export default function Contact() {
         y: contactY,
         opacity: contactOpacity,
       }}
-      className="mb-16 flex flex-col text-center"
+      className="flex flex-col text-center"
     >
       <div className="flex items-center justify-center mb-8">
         <ContactIcon className="mr-4 w-10 h-10" />

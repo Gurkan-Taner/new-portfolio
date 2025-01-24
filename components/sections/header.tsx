@@ -23,7 +23,7 @@ export default function Header() {
         y: headerY,
         opacity: headerOpacity,
       }}
-      className="flex flex-col items-center justify-center h-screen"
+      className="flex flex-col items-center justify-center h-screen relative p-8 sm:p-0"
     >
       <Image
         alt="Photo de profil"
@@ -38,12 +38,12 @@ export default function Header() {
         <h2 className="text-2xl font-medium mb-6">
           Architecte Logiciel et Freelance
         </h2>
-        <h3 className="text-gray-300 text-sm">
+        <h3 className="text-gray-300 text-base">
           Actuellement en dernière année à Epitech en MSc Pro pour préparer un
-          titre d'architecte logiciel, je suis également développeur Fullstack à
-          Progisem en alternance. En plus du dev, je suis également passionné de
-          cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7%
-          monde).
+          titre d&apos;architecte logiciel, je suis également développeur
+          Fullstack à Progisem en alternance. En plus du dev, je suis également
+          passionné de cybersécurité en travaillant sur la plateforme Try Hack
+          Me (Top 7% monde).
         </h3>
       </div>
     </motion.header>

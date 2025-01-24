@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gurkan-taner.vercel.app/"),
   title: {
     default: "Gurkan Taner | Développeur Fullstack et Designer",
     template: "%s | Gurkan Taner",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Bienvenue sur mon portfolio. Découvrez mes projets en développement web, mobile et devops.",
   keywords:
-    "Gurkan Taner, architecte logiciel, développeur, portfolio, fullstack, design, projets web, mobile, cybersécurité",
+    "Gurkan Taner, architecte logiciel, développeur, portfolio, fullstack, design, projets web, mobile, cybersécurité, IA",
   openGraph: {
     title: "Gurkan Taner | Architecte Logiciel",
     description:
@@ -43,6 +44,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://gurkan-taner.vercel.app/",

@@ -3,9 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Gamepad } from "lucide-react";
 import { useRef } from "react";
-import ProjectCarousel from "./project-carousel";
+import ProjectCarousel from "../project-carousel";
 
-export default function CodingGames({ projects }: any) {
+import ProjectProps from "@/interfaces/project-props";
+
+export default function CodingGames({ projects }: ProjectProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -24,7 +26,7 @@ export default function CodingGames({ projects }: any) {
         y: codingGamesY,
         opacity: codingGamesOpacity,
       }}
-      className="mb-16"
+      className="mb-16 relative"
     >
       <div className="flex items-center justify-center mb-8">
         <Gamepad className="mr-4 w-10 h-10" />
