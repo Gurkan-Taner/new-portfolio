@@ -238,23 +238,23 @@ export const DATA = {
       image: "/coding_games/puissance4.png",
       video: "",
     },
-    {
-      title: "Pong",
-      href: "",
-      dates: "1 jour",
-      active: true,
-      description: "",
-      technologies: ["C", "Raylib"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ScoutHub/pong-raylib",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/coding_games/pong.png",
-      video: "",
-    },
+    // {
+    //   title: "Pong",
+    //   href: "",
+    //   dates: "1 jour",
+    //   active: true,
+    //   description: "",
+    //   technologies: ["C", "Raylib"],
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/ScoutHub/pong-raylib",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/coding_games/pong.png",
+    //   video: "",
+    // },
     {
       title: "Space Invader",
       href: "",
