@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "./ui/badge";
@@ -22,15 +22,16 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
       direction === "left"
         ? (selectedIndex - 1 + totalProjects) % totalProjects
         : (selectedIndex + 1) % totalProjects;
+
     setSelectedIndex(newIndex);
   };
 
-  const handleMouseDown = (e: MouseEvent) => {
+  const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
     setStartX(e.clientX);
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
 
     const deltaX = e.clientX - startX;
@@ -41,22 +42,9 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
     }
   };
 
-  useEffect(() => {
-    const handleMouseUpGlobal = () => setIsDragging(false);
-
-    if (isDragging) {
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUpGlobal);
-    } else {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUpGlobal);
-    }
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUpGlobal);
-    };
-  }, [isDragging, startX]);
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center gap-4 perspective-1000">
@@ -64,6 +52,9 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
         ref={carouselRef}
         className="relative w-full max-w-4xl h-80 cursor-grab active:cursor-grabbing select-none"
         onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
       >
         <div
           className="absolute w-full h-full flex justify-center items-center"
@@ -81,7 +72,7 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
 
             return (
               <Card
-                key={`${project} - ${index}`}
+                key={`${project.title} - ${index}`}
                 className={`absolute w-64 h-72 flex-shrink-0 transform transition-all duration-500 ease-in-out border-none
                   ${
                     index === selectedIndex
@@ -104,7 +95,7 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
                       height={300}
                       className="h-60 w-full overflow-hidden object-cover object-top select-none"
                       priority={true}
-                      alt={""}
+                      alt={project.title}
                       onDragStart={(event) => event.preventDefault()}
                     />
                   )}
@@ -129,8 +120,22 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
           })}
         </div>
       </div>
+      <div className="sm:hidden flex justify-center gap-4">
+        <Button
+          onClick={() => handleRotate("left")}
+          className="text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
+        >
+          ←
+        </Button>
+        <Button
+          onClick={() => handleRotate("right")}
+          className="text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
+        >
+          →
+        </Button>
+      </div>
       {projects[selectedIndex].description ? (
-        <div className="w-[80%] min-h-60 sm:min-h-44 p-2 text-center flex flex-col gap-3">
+        <div className="w-[80%] min-h-72 sm:min-h-44 p-2 text-center flex flex-col gap-3">
           <p className="text-gray-300">{projects[selectedIndex].description}</p>
           <div className="flex flex-wrap gap-2 mx-auto justify-center">
             {projects[selectedIndex].technologies.map((techno, index) => {
@@ -162,16 +167,16 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
         </div>
       )}
       {/* Controls */}
-      <div className="flex justify-center gap-4">
+      <div className="hidden sm:flex justify-center gap-4">
         <Button
           onClick={() => handleRotate("left")}
-          className=" text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
+          className="text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
         >
           ←
         </Button>
         <Button
           onClick={() => handleRotate("right")}
-          className=" text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
+          className="text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-125 hover:animate-in duration-500 animation"
         >
           →
         </Button>

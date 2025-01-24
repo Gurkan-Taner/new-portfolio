@@ -34,11 +34,13 @@ export default function Header() {
         priority={true}
       />
       <div className="text-center">
-        <h1 className="text-5xl font-bold tracking-tight mb-2">Gurkan TANER</h1>
-        <h2 className="text-2xl font-medium mb-6">
+        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight mb-2">
+          Gurkan TANER
+        </h1>
+        <h2 className="text-xl sm:text-2xl font-medium mb-6">
           Architecte Logiciel et Freelance
         </h2>
-        <h3 className="text-gray-300 text-base">
+        <h3 className="text-gray-300 text-sm sm:text-base">
           Actuellement en dernière année à Epitech en MSc Pro pour préparer un
           titre d&apos;architecte logiciel, je suis également développeur
           Fullstack à Progisem en alternance. En plus du dev, je suis également
