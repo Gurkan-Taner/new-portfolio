@@ -76,6 +76,20 @@ export default function TerminalHeader() {
       className="flex flex-col items-center justify-center h-screen relative p-4 sm:p-8"
     >
       <div className="bg-[#1F1F1F] text-gray-200 font-mono p-4 sm:p-6 rounded-lg w-full max-w-4xl mx-auto flex flex-col items-center shadow-2xl border border-blue-500/30 gap-y-4">
+        <div className="flex items-center space-x-2 mr-auto">
+          <div
+            className="w-3 h-3 bg-red-500 rounded-full cursor-pointer hover:bg-red-600 transition-colors"
+            title="Fermer"
+          />
+          <div
+            className="w-3 h-3 bg-yellow-500 rounded-full cursor-pointer hover:bg-yellow-600 transition-colors"
+            title="Réduire"
+          />
+          <div
+            className="w-3 h-3 bg-green-500 rounded-full cursor-pointer hover:bg-green-600 transition-colors"
+            title="Agrandir"
+          />
+        </div>
         <div className="text-sm sm:text-xl w-full">
           <span className="text-purple-400 font-bold">
             gurkan@portfolio:~$ {typedTexts.command}

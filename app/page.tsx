@@ -4,6 +4,7 @@ import Header from "@/components/sections/header";
 import Projects from "@/components/sections/projects";
 import CodingGames from "@/components/sections/coding-games";
 import Contact from "@/components/sections/contact";
+import SectionNavigator from "@/components/section-navigation";
 
 import { DATA } from "@/data/resume";
 
@@ -17,21 +18,30 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A] via-[#1F1F1F] to-[#222222] opacity-70 blur-3xl" />
 
       <div className="container mx-auto px-4 py-16 max-w-5xl relative z-10">
-        <BlurFade delay={0.25} inView>
-          <Header />
-        </BlurFade>
-        <BlurFade delay={0.25}>
-          <Projects projects={DATA.projects} />
-        </BlurFade>
-        <BlurFade delay={0.25}>
-          <CodingGames projects={DATA.codingGames} />
-        </BlurFade>
-        <BlurFade delay={0.25}>
-          <Contact />
-        </BlurFade>
+        <section id="header">
+          <BlurFade delay={0.25} inView>
+            <Header />
+          </BlurFade>
+        </section>
+        <section id="projects">
+          <BlurFade delay={0.25}>
+            <Projects projects={DATA.projects} />
+          </BlurFade>
+        </section>
+        <section id="coding-games">
+          <BlurFade delay={0.25}>
+            <CodingGames projects={DATA.codingGames} />
+          </BlurFade>
+        </section>
+        <section id="contact">
+          <BlurFade delay={0.25}>
+            <Contact />
+          </BlurFade>
+        </section>
+        <SectionNavigator />
       </div>
 
-      <footer className="bg-black/20 backdrop-blur-md text-center py-12 mt-48 relative z-10">
+      <footer className="bg-black/20 backdrop-blur-md text-center py-12 mt-48 relative">
         <p className="text-gray-400">
           © {new Date().getFullYear()} - Gurkan TANER
         </p>

@@ -15,7 +15,7 @@ export default function CodingGames({ projects }: ProjectProps) {
   });
 
   const codingGamesScale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
-  const codingGamesY = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
+  const codingGamesY = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const codingGamesOpacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
 
   return (
