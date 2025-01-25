@@ -15,7 +15,7 @@ export default function Contact() {
   });
 
   const contactScale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
-  const contactY = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const contactY = useTransform(scrollYProgress, [0, 1], [50, 0]);
   const contactOpacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function Contact() {
         ou sur mes réseaux sociaux X ou Linkedin.
       </p>
       <Button
-        className=" text-white px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-110 hover:animate-in duration-500 animation m-auto"
+        className="text-white p-6 rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-110 hover:animate-in duration-500 animation m-auto"
         data-cal-namespace="30min"
         data-cal-link="taner-gurkan/30min"
         data-cal-config='{"layout":"month_view"}'
