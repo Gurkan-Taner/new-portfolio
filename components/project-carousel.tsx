@@ -56,7 +56,7 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
               key={`${project} - ${index}`}
               className="md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="bg-white shadow-lg rounded-lg overflow-hidden h-full text-center flex flex-col">
+              <Card className="shadow-lg rounded-lg overflow-hidden h-full text-center flex flex-col bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300">
                 {project.image && (
                   <Image
                     src={project.image}
@@ -79,11 +79,11 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
                   />
                 )}
                 <CardHeader className="p-2 flex flex-col h-fit overflow-auto">
-                  <CardTitle className="text-lg font-bold text-black text-center">
+                  <CardTitle className="text-lg font-bold text-center text-white">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-left text-gray-500 text-sm">
+                <CardContent className="text-left text-gray-400 text-sm">
                   {project.description}
                 </CardContent>
                 <CardFooter className="flex flex-wrap gap-2 mx-auto justify-center mt-auto">
