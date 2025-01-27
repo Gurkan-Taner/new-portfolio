@@ -56,7 +56,7 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
               key={`${project} - ${index}`}
               className="md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="shadow-lg rounded-lg overflow-hidden h-full text-center flex flex-col bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <Card className="shadow-lg rounded-lg overflow-hidden h-full text-center flex flex-col bg-[rgba(0,0,0,0.2)] backdrop-blur-md border border-white/10 hover:bg-gray-500/20 transition-all duration-300">
                 {project.image && (
                   <Image
                     src={project.image}
