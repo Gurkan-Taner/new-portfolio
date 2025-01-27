@@ -16,27 +16,27 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+import { DATA } from "@/data/resume";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gurkan-taner.vercel.app/"),
+  metadataBase: new URL(DATA.url),
   title: {
-    default: "Gurkan Taner | Développeur Fullstack et Designer",
-    template: "%s | Gurkan Taner",
+    default: DATA.name,
+    template: `%s | ${DATA.name}`,
   },
-  description:
-    "Bienvenue sur mon portfolio. Découvrez mes projets en développement web, mobile et devops.",
+  description: DATA.description,
   keywords:
     "Gurkan Taner, architecte logiciel, développeur, portfolio, fullstack, design, projets web, mobile, cybersécurité, IA",
   openGraph: {
-    title: "Gurkan Taner | Architecte Logiciel",
-    description:
-      "Portfolio de Gurkan Taner, un architecte logiciel autodidacte et enthousiaste de la cybersécurité.",
-    url: "https://gurkan-taner.vercel.app/",
-    siteName: "Gurkan Taner Portfolio",
-    locale: "fr_FR",
+    title: DATA.name,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: DATA.name,
+    locale: "fr",
     type: "website",
   },
   twitter: {
-    title: "Gurkan Taner | Architecte Logiciel",
+    title: "Gurkan Taner",
     description:
       "Découvrez les projets et travaux de Gurkan Taner, architecte logiciel et passionné de cybersécurité.",
     creator: "@gkannn_",

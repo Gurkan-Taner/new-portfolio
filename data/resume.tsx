@@ -7,7 +7,7 @@ export const DATA = {
   url: "https://gurkan-taner.vercel.app",
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
-  description: "Développeur Freelance, passionné par la création et les défis.",
+  description: "Architecte Logiciel & Freelance Développeur Web / Mobile",
   summary:
     "Actuellement en dernière année à Epitech en MSc Pro pour préparer un titre d'architecte logiciel, je suis également développeur Fullstack à Progisem en alternance. En plus du dev, je suis également plongé dans cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7% monde).",
   avatarUrl: "",
