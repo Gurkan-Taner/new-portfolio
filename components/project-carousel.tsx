@@ -18,6 +18,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
@@ -109,14 +111,14 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
           onClick={() => api?.scrollPrev()}
           disabled={!api?.canScrollPrev()}
         >
-          {"<"}
+          <ChevronLeft />
         </Button>
         <Button
           className={`rounded-full bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 hover:scale-110 hover:animate-in duration-500 animation`}
           onClick={() => api?.scrollNext()}
           disabled={!api?.canScrollNext()}
         >
-          {">"}
+          <ChevronRight />
         </Button>
       </div>
     </div>
