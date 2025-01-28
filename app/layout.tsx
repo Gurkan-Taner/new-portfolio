@@ -21,25 +21,25 @@ import { DATA } from "@/data/resume";
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: `${DATA.name} - ${DATA.jobTitle} | Portfolio`,
+    template: `%s | ${DATA.name} - Portfolio`,
   },
   description: DATA.description,
-  keywords:
-    "Gurkan Taner, architecte logiciel, développeur, portfolio, fullstack, design, projets web, mobile, cybersécurité, IA",
+  keywords: `${
+    DATA.name
+  }, ${DATA.name.toLowerCase()}, gurkan taner portfolio, taner gurkan portfolio, ${DATA.jobTitle.toLowerCase()}, ${
+    DATA.additionalKeywords
+  }`,
+  authors: [{ name: DATA.name }],
+  creator: DATA.name,
+  publisher: DATA.name,
   openGraph: {
-    title: DATA.name,
+    title: `${DATA.name} - ${DATA.jobTitle}`,
     description: DATA.description,
     url: DATA.url,
-    siteName: DATA.name,
-    locale: "fr",
+    siteName: `Portfolio de ${DATA.name}`,
+    locale: "fr_FR",
     type: "website",
-  },
-  twitter: {
-    title: "Gurkan Taner",
-    description:
-      "Découvrez les projets et travaux de Gurkan Taner, architecte logiciel et passionné de cybersécurité.",
-    creator: "@gkannn_",
   },
   robots: {
     index: true,
@@ -51,11 +51,12 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+    nocache: false,
   },
   alternates: {
-    canonical: "https://gurkan-taner.vercel.app/",
+    canonical: DATA.url,
     languages: {
-      fr: "https://gurkan-taner.vercel.app/",
+      "fr-FR": DATA.url,
     },
   },
 };

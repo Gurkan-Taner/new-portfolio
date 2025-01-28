@@ -7,7 +7,11 @@ export const DATA = {
   url: "https://gurkan-taner.vercel.app",
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
-  description: "Architecte Logiciel & Freelance Développeur Web / Mobile",
+  description:
+    "Gurkan Taner - Architecte Logiciel & Développeur Web/Mobile Freelance à Strasbourg. Expert en développement fullstack, cybersécurité et solutions digitales innovantes.",
+  jobTitle: "Architecte Logiciel & Développeur Freelance",
+  additionalKeywords:
+    "développeur strasbourg, freelance développeur alsace, expert nextjs, architecte logiciel france, développeur, expert nestjs, expert python",
   summary:
     "Actuellement en dernière année à Epitech en MSc Pro pour préparer un titre d'architecte logiciel, je suis également développeur Fullstack à Progisem en alternance. En plus du dev, je suis également plongé dans cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7% monde).",
   avatarUrl: "",
