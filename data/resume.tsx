@@ -8,7 +8,7 @@ export const DATA = {
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
   description:
-    "Gurkan Taner - Architecte Logiciel & Développeur Web/Mobile Freelance à Strasbourg. Expert en développement fullstack, cybersécurité et solutions digitales innovantes.",
+    "Gurkan Taner - Architecte Logiciel & Développeur Web/Mobile Freelance à Strasbourg. Expert en développement fullstack, cybersécurité et solutions digitales.",
   jobTitle: "Architecte Logiciel & Développeur Freelance",
   additionalKeywords:
     "développeur strasbourg, freelance développeur alsace, expert nextjs, architecte logiciel france, développeur, expert nestjs, expert python",

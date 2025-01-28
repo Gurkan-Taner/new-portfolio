@@ -113,18 +113,18 @@ export default function TerminalHeader() {
             <div className="space-y-2">
               <div>
                 <span className="text-purple-400 font-bold">Nom:</span>
-                <span className="ml-2 text-sm sm:text-base">
+                <h1 className="ml-2 text-sm sm:text-base">
                   {typedTexts.name}
-                </span>
+                </h1>
                 {typingStage === 1 && (
                   <span className="ml-1 text-green-500 animate-blink">▮</span>
                 )}
               </div>
               <div>
                 <span className="text-purple-400 font-bold">Rôle:</span>
-                <span className="ml-2 text-sm sm:text-base">
+                <h2 className="ml-2 text-sm sm:text-base">
                   {typedTexts.role}
-                </span>
+                </h2>
                 {typingStage === 2 && (
                   <span className="ml-1 text-green-500 animate-blink">▮</span>
                 )}
