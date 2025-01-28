@@ -67,6 +67,7 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
                     className="h-60 w-full overflow-hidden object-cover object-top select-none"
                     priority={true}
                     alt={project.title}
+                    title={project.title}
                     onDragStart={(event) => event.preventDefault()}
                   />
                 )}
