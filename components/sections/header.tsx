@@ -102,6 +102,7 @@ export default function TerminalHeader() {
           <div className="flex-shrink-0 self-center">
             <Image
               alt="Photo de profil"
+              title="Photo de profil"
               src="/me.png"
               width={150}
               height={150}
@@ -113,7 +114,7 @@ export default function TerminalHeader() {
             <div className="space-y-2">
               <div>
                 <span className="text-purple-400 font-bold">Nom:</span>
-                <h1 className="ml-2 text-sm sm:text-base">
+                <h1 className="ml-2 text-sm sm:text-base inline">
                   {typedTexts.name}
                 </h1>
                 {typingStage === 1 && (
@@ -122,7 +123,7 @@ export default function TerminalHeader() {
               </div>
               <div>
                 <span className="text-purple-400 font-bold">Rôle:</span>
-                <h2 className="ml-2 text-sm sm:text-base">
+                <h2 className="ml-2 text-sm sm:text-base inline">
                   {typedTexts.role}
                 </h2>
                 {typingStage === 2 && (
