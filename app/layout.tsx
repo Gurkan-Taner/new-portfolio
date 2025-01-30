@@ -59,9 +59,6 @@ export const metadata: Metadata = {
       "fr-FR": DATA.url,
     },
   },
-  verification: {
-    google: "v0PmZcJZyo2_5_2zFgtuYCMcr9t-vOrLEW0MaBdVGEs",
-  },
 };
 
 export default function RootLayout({
