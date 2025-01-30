@@ -59,6 +59,9 @@ export const metadata: Metadata = {
       "fr-FR": DATA.url,
     },
   },
+  verification: {
+    google: "v0PmZcJZyo2_5_2zFgtuYCMcr9t-vOrLEW0MaBdVGEs",
+  },
 };
 
 export default function RootLayout({
@@ -69,10 +72,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <meta
-          name="google-site-verification"
-          content="v0PmZcJZyo2_5_2zFgtuYCMcr9t-vOrLEW0MaBdVGEs"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
