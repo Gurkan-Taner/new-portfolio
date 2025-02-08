@@ -53,7 +53,7 @@ export const DATA = {
         url: "https://x.com/gkannn_",
         icon: Icons.x,
 
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",

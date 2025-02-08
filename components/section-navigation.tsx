@@ -6,7 +6,13 @@ import { Button } from "./ui/button";
 
 const SectionNavigator = () => {
   const [currentSection, setCurrentSection] = useState(0);
-  const sectionsRef = useRef(["header", "projects", "coding-games", "contact"]);
+  const sectionsRef = useRef([
+    "header",
+    "stack",
+    "projects",
+    "coding-games",
+    "contact",
+  ]);
 
   const scrollToSection = (direction: string) => {
     const currentIndex = currentSection;

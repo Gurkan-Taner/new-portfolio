@@ -7,6 +7,7 @@ import Contact from "@/components/sections/contact";
 import SectionNavigator from "@/components/section-navigation";
 
 import { DATA } from "@/data/resume";
+import TechStack from "@/components/sections/tech-stack";
 
 export default function Home() {
   return (
@@ -21,6 +22,11 @@ export default function Home() {
         <section id="header">
           <BlurFade delay={0.25} inView>
             <Header />
+          </BlurFade>
+        </section>
+        <section id="stack">
+          <BlurFade delay={0.25} inView>
+            <TechStack />
           </BlurFade>
         </section>
         <section id="projects">
