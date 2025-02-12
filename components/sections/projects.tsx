@@ -90,3 +90,4 @@ export default function Projects({ projects }: ProjectProps) {
     </motion.section>
   );
 }
+
