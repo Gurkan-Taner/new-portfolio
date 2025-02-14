@@ -145,6 +145,17 @@ export const DATA = {
       video: "/projects/pneumonia.mov",
     },
     {
+      title: "XYZ",
+      href: "#",
+      dates: "Février 2025 - Mars 2025",
+      active: true,
+      description:
+        "Plateforme immobilière pour trouver et acheter / louer un bien. Dashboard personnalisé dans la page profil pour visualiser son parc immobilier.",
+      technologies: ["React", "Tailwind", "Shadcn", "NestJS"],
+      image: "",
+      video: "/projects/xyz.mov",
+    },
+    {
       title: "Jurisconnect",
       href: "#",
       dates: "Décembre 2023 - Juillet 2025",
