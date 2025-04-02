@@ -183,6 +183,16 @@ export const DATA = {
       video: "",
     },
     {
+      title: "DocIA",
+      href: "#",
+      active: true,
+      description:
+        "Création d'un agent IA qui permets de clone un repo Github pour créer, depuis le projet, un README complet avec une explication de l'architecture, un .env d'exemple et un fichier CONTRIBUTING basé sur l'historique de commit.",
+      technologies: ["React", "Python", "Langchain"],
+      image: "",
+      video: "/projects/github_doc.mov",
+    },
+    {
       title: "E-psy",
       href: "",
       dates: "Novembre 2024 - Aujourd'hui",
