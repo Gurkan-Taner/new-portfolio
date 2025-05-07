@@ -254,3 +254,4 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
     </div>
   );
 }
+
