@@ -87,3 +87,4 @@ export default function CodingGames({ projects }: ProjectProps) {
     </motion.section>
   );
 }
+
