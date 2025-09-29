@@ -28,7 +28,7 @@ export default function TerminalHeader() {
     name: "Gurkan TANER",
     role: "Architecte Logiciel et Freelance",
     about:
-      "Actuellement en dernière année à Epitech en MSc Pro pour préparer un titre d'architecte logiciel, je suis également développeur Fullstack à Progisem en alternance. En plus du dev, je suis également passionné de cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7% monde).",
+      "Titulaire d'un Master en tant qu'Architecte logiciel, je suis actuellement développeur fullstack et DevOps à Progisem. À côté, je suis également freelance et j'aide les boîtes à gérer leur business en apportant mon expertise dans leur code / architecture. Passionné de cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7% monde).",
   };
 
   useEffect(() => {

@@ -145,6 +145,16 @@ export const DATA = {
       video: "/projects/pneumonia.mov",
     },
     {
+      title: "Initly",
+      href: "https://initly.io/",
+      active: true,
+      description:
+        "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
+      technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
+      image: "",
+      video: "/projects/initly.mov",
+    },
+    {
       title: "XYZ",
       href: "#",
       dates: "Février 2025 - Mars 2025",
@@ -181,16 +191,6 @@ export const DATA = {
       ],
       image: "/projects/themis.png",
       video: "",
-    },
-    {
-      title: "Initly",
-      href: "https://initly.io/",
-      active: true,
-      description:
-        "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
-      technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
-      image: "",
-      video: "/projects/initly.mov",
     },
     {
       title: "E-psy",
