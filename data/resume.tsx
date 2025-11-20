@@ -36,23 +36,20 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/scouthub",
+        url: "https://github.com/Gurkan-Taner",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/gurkan-taner/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/gkannn_",
         icon: Icons.x,
-
         navbar: false,
       },
       email: {
@@ -138,7 +135,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/Gurkan-Taner/pneumonIA",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "",
@@ -151,17 +148,30 @@ export const DATA = {
       description:
         "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
       technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
+      links: [],
       image: "",
       video: "/projects/initly.mov",
     },
     {
-      title: "XYZ",
+      title: "E-Mobilier",
       href: "#",
       dates: "Février 2025 - Mars 2025",
       active: true,
       description:
         "Plateforme immobilière pour trouver et acheter / louer un bien. Dashboard personnalisé dans la page profil pour visualiser son parc immobilier.",
       technologies: ["React", "Tailwind", "Shadcn", "NestJS"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Gurkan-Taner/e-mobilier",
+          icon: "github",
+        },
+        {
+          type: "Visit",
+          href: "https://e-mobilier.vercel.app/",
+          icon: "website",
+        },
+      ],
       image: "",
       video: "/projects/xyz.mov",
     },
@@ -186,7 +196,7 @@ export const DATA = {
         {
           type: "C++ backend",
           href: "https://github.com/ScoutHub/JurisConnect-Backend",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/projects/themis.png",
@@ -200,6 +210,7 @@ export const DATA = {
       description:
         "Plateforme web conçue pour les personnes en détresse émotionnelles. L'utilisateur peut soit décider de discuter soit être la personne qui écoute, une sorte de thérapie.",
       technologies: ["Python", "Websocket", "Next"],
+      links: [],
       image: "",
       video: "/projects/e-psy.mov",
     },
@@ -241,6 +252,7 @@ export const DATA = {
         "React Native",
         "FastAPI",
       ],
+      links: [],
       image: "/projects/navify.png",
       video: "",
     },
@@ -257,7 +269,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/ScoutHub/puissance4-raylib",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/coding_games/puissance4.png",
@@ -274,7 +286,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/ScoutHub/pong-raylib",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/coding_games/pong.png",
@@ -291,7 +303,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/ScoutHub/SpaceInvader-raylib",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/coding_games/space_invader.png",
@@ -308,7 +320,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/ScoutHub/CTicTacToe",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/coding_games/tictactoe.png",
@@ -325,7 +337,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/ScoutHub/CTicTacToe",
-          icon: <Icons.github className="size-3" />,
+          icon: "github",
         },
       ],
       image: "/coding_games/snake.png",

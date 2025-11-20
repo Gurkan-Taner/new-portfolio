@@ -150,6 +150,7 @@ export default function TechStack() {
                       alt={`${tech.name} logo`}
                       fill
                       className="drop-shadow-lg"
+                      sizes="100%"
                     />
                   </div>
                   <p className="text-lg font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
@@ -178,6 +179,7 @@ export default function TechStack() {
                       src={tech.logo}
                       alt={`${tech.name} logo`}
                       fill
+                      sizes="100%"
                       className="drop-shadow-lg"
                     />
                   </div>

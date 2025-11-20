@@ -23,14 +23,30 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import ProjectProps from "@/interfaces/project-props";
+import Link from "next/link";
+import { Icons } from "./icons";
 
 const MotionCarouselItem = motion.create(CarouselItem);
 
+const renderIcon = (iconName: string | React.ReactElement) => {
+  if (typeof iconName === "string") {
+    const iconMap: { [key: string]: React.ReactElement } = {
+      github: <Icons.github className="size-3" />,
+      linkedin: <Icons.linkedin className="size-3" />,
+      x: <Icons.x className="size-3" />,
+      email: <Icons.email className="size-3" />,
+      website: <Icons.globe className="size-3" />,
+    };
+    return iconMap[iconName] || null;
+  }
+  return iconName;
+};
+
 export default function ProjectCarousel({ projects }: ProjectProps) {
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [, setCurrent] = useState(0);
+  const [, setCount] = useState(0);
+  const [, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (!api) return;
@@ -160,19 +176,43 @@ export default function ProjectCarousel({ projects }: ProjectProps) {
                         {project.description}
                       </motion.div>
                     </CardContent>
-                    <CardFooter className="flex flex-wrap gap-2 mx-auto justify-center mt-auto">
-                      {project.technologies.map((techno, techIndex) => (
-                        <motion.div
-                          key={`${techno}-${techIndex}`}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.5 + techIndex * 0.1 }}
-                        >
-                          <Badge className="bg-black text-white hover:scale-110 transition-transform duration-300">
-                            {techno}
-                          </Badge>
-                        </motion.div>
-                      ))}
+                    <CardFooter className="flex flex-col gap-3 mx-auto justify-center mt-auto w-full">
+                      <div className="flex flex-wrap gap-2 mx-auto justify-center">
+                        {project.technologies.map((techno, techIndex) => (
+                          <motion.div
+                            key={`${techno}-${techIndex}`}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.5 + techIndex * 0.1 }}
+                          >
+                            <Badge className="bg-black text-white hover:scale-110 transition-transform duration-300">
+                              {techno}
+                            </Badge>
+                          </motion.div>
+                        ))}
+                      </div>
+                      <div className="flex flex-wrap gap-2 mx-auto justify-center">
+                        {project.links?.map((link, i) => {
+                          return (
+                            <motion.div
+                              key={`${link.href}-${i}`}
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: 0.5 + i * 0.1 }}
+                            >
+                              <Link
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black text-white hover:bg-gray-800 transition-colors duration-300"
+                              >
+                                {renderIcon(link.icon)}
+                                <span className="text-xs font-bold">{link.type}</span>
+                              </Link>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
                     </CardFooter>
                   </Card>
                 </motion.div>

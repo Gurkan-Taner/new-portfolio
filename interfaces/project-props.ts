@@ -13,7 +13,7 @@ export default interface ProjectProps {
     readonly links?: ReadonlyArray<{
       readonly type: string;
       readonly href: string;
-      readonly icon: ReactElement;
+      readonly icon: string | ReactElement;
     }>;
   }>;
 }
