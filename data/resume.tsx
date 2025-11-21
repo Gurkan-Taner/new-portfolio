@@ -148,7 +148,13 @@ export const DATA = {
       description:
         "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
       technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
-      links: [],
+      links: [
+        {
+          type: "Visit",
+          href: "https://initly.io/",
+          icon: "website",
+        },
+      ],
       image: "",
       video: "/projects/initly.mov",
     },
