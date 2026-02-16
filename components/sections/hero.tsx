@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { Zap } from "lucide-react";
 
+import useScroll from "@/hooks/useScroll";
+
 import { DATA } from "@/data/resume";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { motion } from "framer-motion";
@@ -61,6 +63,8 @@ const Typewriter = ({ text }: { text: string }) => {
 };
 
 export default function Hero() {
+  const { scrollToSection } = useScroll();
+
   return (
     <>
       <BlurFade delay={0.1}>
@@ -102,6 +106,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="#contact"
+            onClick={(e) => scrollToSection(e, "#contact")}
             className="group relative px-8 py-4 bg-white text-black font-bold rounded-xl overflow-hidden transition-all hover:scale-105 "
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -110,6 +115,7 @@ export default function Hero() {
           </Link>
           <Link
             href="#projects"
+            onClick={(e) => scrollToSection(e, "#projects")}
             className="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl font-medium transition-all"
           >
             Voir mes travaux
