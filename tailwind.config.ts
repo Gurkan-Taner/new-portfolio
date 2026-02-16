@@ -59,6 +59,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
     },
+    keyframes: { shimmer: { "100%": { transform: "translateX(200%)" } } },
+    animation: { shimmer: "shimmer 1.5s infinite" },
   },
   plugins: [require("tailwindcss-animate")],
 };

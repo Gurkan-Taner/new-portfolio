@@ -1,90 +1,74 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-import { Gamepad } from "lucide-react";
+import { DATA } from "@/data/resume";
+import { SectionTitle } from "@/components/section-title";
+import Image from "next/image";
+import Link from "next/link";
+import { ProjectIcon } from "./projects";
 
-import ProjectCarousel from "../project-carousel";
-
-import ProjectProps from "@/interfaces/project-props";
-import { useParallax } from "@/lib/utils";
-
-export default function CodingGames({ projects }: ProjectProps) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const codingGamesScale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
-  const codingGamesY = useTransform(scrollYProgress, [0, 1], [100, 0]);
-  const codingGamesOpacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
-
-  const iconX = useParallax(scrollYProgress, -20);
-  const titleX = useParallax(scrollYProgress, 20);
-
+export default function CodingGames() {
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 0.8,
-        ease: [0.6, 0.01, -0.05, 0.95],
-      }}
-      style={{
-        scale: codingGamesScale,
-        y: codingGamesY,
-        opacity: codingGamesOpacity,
-      }}
-      className="mb-16 relative py-10"
-    >
-      <motion.div
-        className="flex items-center justify-center mb-8 overflow-hidden"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{
-          duration: 0.6,
-          delay: 0.2,
-          ease: "easeOut",
-        }}
-      >
-        <motion.div style={{ x: iconX }} className="relative">
-          <Gamepad className="mr-4 w-10 h-10" />
-        </motion.div>
-        <motion.h3
-          style={{ x: titleX }}
-          className="text-4xl font-bold bg-gradient-to-r bg-clip-text "
-        >
-          Coding Games
-        </motion.h3>
-      </motion.div>
-      <motion.p
-        className="text-center text-gray-300 mb-10 max-w-2xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.6,
-          delay: 0.4,
-          ease: "easeOut",
-        }}
-      >
-        Exploration créative du développement de jeux en C avec la bibliothèque
-        Raylib.
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: 0.6,
-          ease: "easeOut",
-        }}
-      >
-        <ProjectCarousel projects={projects} />
-      </motion.div>
-    </motion.section>
+    <>
+      <SectionTitle title="Game Dev" subtitle="C / Raylib Playground" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {DATA.codingGames.map((game, i) => (
+          <motion.div
+            key={`${game} - ${i}`}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ y: -10 }}
+            className="group relative rounded-3xl overflow-hidden bg-[#111] border border-white/10"
+          >
+            <div className="aspect-video relative overflow-hidden bg-gray-900 opacity-60 group-hover:opacity-100 transition-opacity">
+              <Image
+                src={game.image}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+                className="object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                alt={`game ${game.title}`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
+            </div>
+            <div className="p-8">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-2xl font-bold">{game.title}</h3>
+                <div className="flex gap-2">
+                  {game.links?.map((link, lIdx) => (
+                    <Link
+                      key={lIdx}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link relative p-2.5 bg-white/5 border border-white/10 rounded-full text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500/50 transition-all duration-300"
+                      title={link.type}
+                    >
+                      <ProjectIcon type={link.icon || link.type} />
+
+                      <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800 text-[10px] font-bold rounded opacity-0 group-hover/link:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-white/10">
+                        {link.type}
+                      </span>
+                    </Link>
+                  ))}{" "}
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {game.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[10px] uppercase tracking-tighter px-2 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </>
   );
 }
 

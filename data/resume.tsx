@@ -11,9 +11,9 @@ export const DATA = {
     "Gurkan Taner - Architecte Logiciel & Développeur Web/Mobile Freelance à Strasbourg. Expert en développement fullstack, cybersécurité et solutions digitales.",
   jobTitle: "Architecte Logiciel & Développeur Freelance",
   additionalKeywords:
-    "développeur strasbourg, freelance développeur alsace, expert nextjs, architecte logiciel france, développeur, expert nestjs, expert python",
+    "développeur strasbourg, freelance développeur, expert nextjs, architecte logiciel france, développeur, expert nestjs, expert python, software engineer, devops",
   summary:
-    "Actuellement en dernière année à Epitech en MSc Pro pour préparer un titre d'architecte logiciel, je suis également développeur Fullstack à Progisem en alternance. En plus du dev, je suis également plongé dans cybersécurité en travaillant sur la plateforme Try Hack Me (Top 7% monde).",
+    "J’aide les entreprises à transformer leurs idées en MVP et en SaaS. Mon rôle : concevoir des architectures solides, des développements fiables et des infrastructures efficaces pour soutenir leur croissance.",
   avatarUrl: "",
   skills: [
     "Vue",
@@ -46,17 +46,10 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://x.com/gkannn_",
-        icon: Icons.x,
-        navbar: false,
-      },
       email: {
         name: "Send Email",
         url: "gurkan.taner@outlook.fr",
         icon: Icons.email,
-
         navbar: false,
       },
     },
@@ -70,10 +63,35 @@ export const DATA = {
       location: "Entzheim, FR",
       title: "Développeur Fullstack / DevOps",
       logoUrl: "/company/progisem.png",
-      start: "Août 2023",
+      start: "Septembre 2025",
       end: "Aujourd'hui",
       description:
-        "Développement d'application web avec VueJS en front et Node (express) en back. L'application web regroupe plusieurs logiciels métiers tel que la gestion d'opération et la comptabilité. Implémentation de Jenkins pour la CI/CD ainsi que de test unitaire.",
+        "Développement et maintenance d’une application web métier de gestion d’opérations et de projets utilisée par +500 entreprises avec Node et Vue. L'application web regroupe plusieurs logiciels métiers tel que la gestion d'opération et la comptabilité. Implémentation de Jenkins pour la CI/CD ainsi que de test unitaire.",
+    },
+    {
+      company: "Initly",
+      href: "",
+      badges: [],
+      location: "Remote",
+      title: "Co-Founder | Développeur Fullstack & Product Marketing",
+      logoUrl: "",
+      start: "Mai 2025",
+      end: "3 mois",
+      description:
+        "Création et développement d’un SaaS d’onboarding développeur basé sur un agent IA, automatisant la génération de documentation technique (README, .env.example, CONTRIBUTING, Dockerfile) à partir de projet Github. \
+        Acquisition et gestion de +100 utilisateurs et +200 projets créés, avec pilotage du produit via feedback utilisateurs et diffusion sur LinkedIn, X et Reddit.",
+    },
+    {
+      company: "Progisem",
+      href: "https://logiciels.progisem.com/",
+      badges: [],
+      location: "Entzheim, FR",
+      title: "Alternant Développeur Fullstack",
+      logoUrl: "/company/progisem.png",
+      start: "Août 2023",
+      end: "Août 2025",
+      description:
+        "Développement et maintenance d’une application web métier de gestion d’opérations et de projets utilisée par +500 entreprises avec Node et Vue. L'application web regroupe plusieurs logiciels métiers tel que la gestion d'opération et la comptabilité. Implémentation de Jenkins pour la CI/CD ainsi que de test unitaire.",
     },
     {
       company: "Hackathon - Hacking Health Camp",
@@ -92,7 +110,7 @@ export const DATA = {
     {
       school: "Epitech",
       href: "https://www.epitech.eu/",
-      degree: "MSc Pro - Titre Architecte logiciel",
+      degree: "MSc Pro - Architecte logiciel",
       logoUrl: "/school/epitech.png",
       start: "2022",
       end: "2025",
@@ -148,13 +166,7 @@ export const DATA = {
       description:
         "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
       technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
-      links: [
-        {
-          type: "Visit",
-          href: "https://initly.io/",
-          icon: "website",
-        },
-      ],
+      links: [],
       image: "",
       video: "/projects/initly.mov",
     },
@@ -179,7 +191,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "/projects/xyz.mov",
+      video: "/projects/emmobilier.mp4",
     },
     {
       title: "Themis",
