@@ -194,6 +194,41 @@ export const DATA = {
       video: "/projects/emmobilier.mp4",
     },
     {
+      title: "SaaS Agency",
+      href: "#",
+      dates: "Décembre 2025 - Aujourd'hui",
+      active: true,
+      description:
+        "Plateforme pour les agences afin de faciliter le management et le suivi du projet avec leur clients.",
+      technologies: ["Next", "Tailwind", "Shadcn"],
+      links: [
+        {
+          type: "Visit",
+          href: "https://agency-builder-nine.vercel.app/tasks",
+          icon: "website",
+        },
+      ],
+      image: "",
+      video: "/projects/saas-agency.mp4",
+    },
+    {
+      title: "Crow-Swagger",
+      href: "",
+      active: true,
+      description:
+        "Développement d'un Swagger custom pour le framework Crow (C++). Parsing des fichiers de routes et création du HTML dynamiquement.",
+      technologies: ["C++", "Crow", "HTML"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/gurkan-Taner/crow-swagger",
+          icon: "github",
+        },
+      ],
+      image: "",
+      video: "/projects/crow-swagger.mp4",
+    },
+    {
       title: "Themis",
       href: "#",
       dates: "Décembre 2023 - Juillet 2025",
