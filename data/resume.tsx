@@ -66,7 +66,7 @@ export const DATA = {
       start: "Septembre 2025",
       end: "Aujourd'hui",
       description:
-        "Développement et maintenance d’une application web métier de gestion d’opérations et de projets utilisée par +500 entreprises avec Node et Vue. L'application web regroupe plusieurs logiciels métiers tel que la gestion d'opération et la comptabilité. Implémentation de Jenkins pour la CI/CD ainsi que de test unitaire.",
+        "Développement et maintenance d’une application web métier de gestion d’opérations et de projets utilisée par +500 entreprises avec Node et Vue. L'application web regroupe plusieurs logiciels métiers tels que la gestion d’opérations et la comptabilité. Implémentation de Jenkins pour la CI/CD ainsi que de tests unitaires.",
     },
     {
       company: "Initly",
@@ -78,7 +78,7 @@ export const DATA = {
       start: "Mai 2025",
       end: "3 mois",
       description:
-        "Création et développement d’un SaaS d’onboarding développeur basé sur un agent IA, automatisant la génération de documentation technique (README, .env.example, CONTRIBUTING, Dockerfile) à partir de projet Github. \
+        "Création et développement d’un SaaS d’onboarding développeur basé sur un agent IA, automatisant la génération de documentation technique (README, .env.example, CONTRIBUTING, Dockerfile) à partir de l'url GitHub. \
         Acquisition et gestion de +100 utilisateurs et +200 projets créés, avec pilotage du produit via feedback utilisateurs et diffusion sur LinkedIn, X et Reddit.",
     },
     {
@@ -103,7 +103,7 @@ export const DATA = {
       start: "Avril 2023",
       end: "3 jours",
       description:
-        "Développement mobile avec Flutter de SimpliSigne. C'est une application qui traduit le langage des signes français en français, en direct depuis la caméra du téléphone. J'ai également intégré le modèle entraîné dans l'application mobile.",
+        "Développement mobile avec Flutter de SimpliSigne. C'est une application qui traduit le langage des signes français en texte français, en direct depuis la caméra du téléphone. J'ai également intégré le modèle entraîné dans l'application mobile.",
     },
   ],
   education: [
@@ -118,7 +118,7 @@ export const DATA = {
     {
       school: "Lycée Couffignal",
       href: "https://lyc-couffignal-strasbourg.site.ac-strasbourg.fr/",
-      degree: "BTS Système Numérique option Informatique et Réseaux",
+      degree: "BTS Systèmes numériques option Informatique et Réseaux",
       logoUrl: "/school/couffignal.jpg",
       start: "2020",
       end: "2022",
@@ -126,7 +126,7 @@ export const DATA = {
     {
       school: "Université de Strasbourg",
       href: "https://www.unistra.fr/",
-      degree: "Licence en Mathématique / Informatique",
+      degree: "Licence en Mathématiques / Informatique",
       logoUrl: "/school/ufr.png",
       start: "2019",
       end: "2020",
@@ -134,7 +134,7 @@ export const DATA = {
     {
       school: "Lycée Kléber",
       href: "https://lycee-kleber.com.fr/",
-      degree: "Bac Scientifique option Science d'Ingénieur",
+      degree: "Bac scientifique option Sciences de l’ingénieur",
       logoUrl: "/school/kleber.png",
       start: "2017",
       end: "2019",
@@ -147,7 +147,7 @@ export const DATA = {
       dates: "Avril 2024 - Juin 2024",
       active: true,
       description:
-        "Projet python qui utilise différent modèle de machine learning (depuis Scikit) pour détecter si un patient est atteint de pneumonie ou non depuis une radiographie.",
+        "Projet Python qui utilise différents modèles de machine learning (avec Scikit-learn) pour détecter si un patient est atteint de pneumonie ou non depuis une radiographie.",
       technologies: ["Python", "Scikit", "Streamlit"],
       links: [
         {
@@ -164,7 +164,7 @@ export const DATA = {
       href: "https://initly.io/",
       active: true,
       description:
-        "SaaS qui permets de clone un repo Github et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et Github Actions.",
+        "SaaS qui permet de clone un repo GitHub et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et GitHub Actions.",
       technologies: ["Next", "FastAPI", "Stripe", "OpenAI API"],
       links: [],
       image: "",
@@ -199,7 +199,7 @@ export const DATA = {
       dates: "Décembre 2025 - Aujourd'hui",
       active: true,
       description:
-        "Plateforme pour les agences afin de faciliter le management et le suivi du projet avec leur clients.",
+        "Plateforme pour les agences afin de faciliter le management et le suivi du projet avec leurs clients.",
       technologies: ["Next", "Tailwind", "Shadcn"],
       links: [
         {
@@ -261,7 +261,7 @@ export const DATA = {
       dates: "Novembre 2024 - Aujourd'hui",
       active: true,
       description:
-        "Plateforme web conçue pour les personnes en détresse émotionnelles. L'utilisateur peut soit décider de discuter soit être la personne qui écoute, une sorte de thérapie.",
+        "Plateforme web conçue pour les personnes en détresse émotionnelle. L'utilisateur peut soit décider de discuter soit être la personne qui écoute, une sorte de thérapie.",
       technologies: ["Python", "Websocket", "Next"],
       links: [],
       image: "",
@@ -273,7 +273,7 @@ export const DATA = {
       dates: "Septembre 2024 - Janvier 2025",
       active: true,
       description:
-        "Développement d'un dashboard affichant le cours de la cryptomonnaie depuis le scrapping de site web déjà existant. Le scrapping est fait en python avec la librarie beautifulsoup avec un backend en flask.",
+        "Développement d'un dashboard affichant le cours de la cryptomonnaie depuis le scraping de sites web existants. Le scrapping est fait en python avec la bibliothèque BeautifulSoup et un backend en Flask.",
       technologies: [
         "Next.js",
         "Nest.js",
@@ -295,7 +295,7 @@ export const DATA = {
       active: true,
       description:
         "Application web pour déterminer le meilleur itinéraire d'un point A à un point B grâce à Dijkstra. L'utilisateur peut faire sa demande via un vocal ou texte écrit.\
-          Utilisation de Whisper pour la reconnaissance vocal et Spacy (NLP) pour le traitement de texte.",
+          Utilisation de Whisper pour la reconnaissance vocale et spaCy (NLP) pour le traitement de texte.",
       technologies: [
         "Python",
         "Spacy",
