@@ -1,0 +1,7 @@
+Contact: security@gurkan-taner.fr
+Security-URL: https://gurkan-taner.fr/security
+Preferred-Languages: fr, en
+Expires: 2027-03-30T00:00:00Z
+Canonical: https://gurkan-taner.fr/.well-known/security.txt
+Policy: https://gurkan-taner.fr/security-policy
+Acknowledgments: https://github.com/Gurkan-Taner

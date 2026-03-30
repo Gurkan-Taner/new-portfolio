@@ -4,14 +4,14 @@ import { HomeIcon } from "lucide-react";
 export const DATA = {
   name: "Gurkan Taner",
   initials: "GT",
-  url: "https://gurkan-taner.vercel.app",
+  url: "https://gurkan-taner.fr",
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
   description:
-    "Gurkan Taner - Architecte Logiciel & Développeur Web/Mobile Freelance à Strasbourg. Expert en développement fullstack, cybersécurité et solutions digitales.",
-  jobTitle: "Architecte Logiciel & Développeur Freelance",
+    "Gurkan Taner - Software Engineer Freelance à Strasbourg. Expert en développement fullstack.",
+  jobTitle: "Software Engineer Freelance",
   additionalKeywords:
-    "développeur strasbourg, freelance développeur, expert nextjs, architecte logiciel france, développeur, expert nestjs, expert python, software engineer, devops",
+    "développeur strasbourg, freelance développeur, expert nextjs, software engineer france, développeur, expert nestjs, expert python, software engineer, devops",
   summary:
     "J’aide les entreprises à transformer leurs idées en MVP et en SaaS. Mon rôle : concevoir des architectures solides, des développements fiables et des infrastructures efficaces pour soutenir leur croissance.",
   avatarUrl: "",
