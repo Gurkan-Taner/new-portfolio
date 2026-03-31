@@ -20,7 +20,7 @@ export default function PortfolioPage() {
         </div>
         <ProgressBar />
         <main className="container mx-auto px-6 relative z-10">
-          <section className="min-h-screen flex flex-col justify-center pt-20">
+          <section className="min-h-screen flex flex-col justify-center">
             <Hero />
           </section>
 
