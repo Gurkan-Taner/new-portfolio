@@ -34,6 +34,12 @@ export const DATA = {
     email: "hello@example.com",
     tel: "+123456789",
     social: {
+      Blog: {
+        name: "Blog",
+        url: "/blog",
+        icon: Icons.pencil,
+        navbar: true,
+      },
       GitHub: {
         name: "GitHub",
         url: "https://github.com/Gurkan-Taner",
