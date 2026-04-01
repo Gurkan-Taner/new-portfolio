@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  background-color: #050505;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
@@ -77,7 +82,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
-
-

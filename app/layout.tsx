@@ -6,9 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/navbar";
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 const geistSans = localFont({
@@ -88,7 +89,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fr">
+    <html lang="fr" className="bg-[#050505]">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen w-full `}
       >
