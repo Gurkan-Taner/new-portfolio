@@ -1,4 +1,4 @@
-function parseFrenchDate(dateStr: string): Date {
+export function parseFrenchDate(dateStr: string): Date {
   const months: { [key: string]: number } = {
     janvier: 0,
     février: 1,
