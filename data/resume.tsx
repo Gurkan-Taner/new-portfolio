@@ -68,7 +68,6 @@ export const DATA = {
       badges: [],
       location: "Entzheim, FR",
       title: "Développeur Fullstack / DevOps",
-      logoUrl: "/company/progisem.png",
       start: "Septembre 2025",
       end: "Aujourd'hui",
       description:
@@ -80,7 +79,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Co-Founder | Développeur Fullstack & Product Marketing",
-      logoUrl: "",
+
       start: "Mai 2025",
       end: "3 mois",
       description:
@@ -93,7 +92,6 @@ export const DATA = {
       badges: [],
       location: "Entzheim, FR",
       title: "Alternant Développeur Fullstack",
-      logoUrl: "/company/progisem.png",
       start: "Août 2023",
       end: "Août 2025",
       description:
@@ -105,7 +103,6 @@ export const DATA = {
       badges: [],
       location: "Strasbourg, FR",
       title: "Développeur mobile / Intégration IA",
-      logoUrl: "/company/hhc.png",
       start: "Avril 2023",
       end: "3 jours",
       description:
@@ -117,7 +114,6 @@ export const DATA = {
       school: "Epitech",
       href: "https://www.epitech.eu/",
       degree: "MSc Pro - Architecte logiciel",
-      logoUrl: "/school/epitech.png",
       start: "2022",
       end: "2025",
     },
@@ -125,7 +121,6 @@ export const DATA = {
       school: "Lycée Couffignal",
       href: "https://lyc-couffignal-strasbourg.site.ac-strasbourg.fr/",
       degree: "BTS Systèmes numériques option Informatique et Réseaux",
-      logoUrl: "/school/couffignal.jpg",
       start: "2020",
       end: "2022",
     },
@@ -133,7 +128,6 @@ export const DATA = {
       school: "Université de Strasbourg",
       href: "https://www.unistra.fr/",
       degree: "Licence en Mathématiques / Informatique",
-      logoUrl: "/school/ufr.png",
       start: "2019",
       end: "2020",
     },
@@ -141,12 +135,44 @@ export const DATA = {
       school: "Lycée Kléber",
       href: "https://lycee-kleber.com.fr/",
       degree: "Bac scientifique option Sciences de l’ingénieur",
-      logoUrl: "/school/kleber.png",
       start: "2017",
       end: "2019",
     },
   ],
   projects: [
+    {
+      title: "Cop1",
+      href: "",
+      dates: "Avril 2026",
+      active: true,
+      description:
+        "Application web pour améliorer la logistique au sein d'une association. Permets de créer, modifier et de s'inscrire à des missions en quelques clics.",
+      technologies: ["NextJS", "NestJS", "Docker"],
+      links: [
+        {
+          type: "Visit",
+          href: "https://cop1.gurkan-taner.fr/",
+          icon: "website",
+        },
+      ],
+      image: "/projects/cop1.webp",
+    },
+    {
+      title: "Tracy",
+      href: "",
+      dates: "Mars 2026",
+      active: true,
+      description: "Landing page réalisée pour un service d'IA local.",
+      technologies: ["NextJS", "framer-motion", "Docker"],
+      links: [
+        {
+          type: "Visit",
+          href: "https://tracy-ai.com/",
+          icon: "website",
+        },
+      ],
+      image: "/projects/tracy.webp",
+    },
     {
       title: "PneumonIA",
       href: "",
@@ -258,7 +284,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/projects/themis.png",
+      image: "/projects/themis.webp",
       video: "",
     },
     {
@@ -269,9 +295,15 @@ export const DATA = {
       description:
         "Plateforme web conçue pour les personnes en détresse émotionnelle. L'utilisateur peut soit décider de discuter soit être la personne qui écoute, une sorte de thérapie.",
       technologies: ["Python", "Websocket", "Next"],
-      links: [],
-      image: "",
-      video: "/projects/e-psy.mov",
+      links: [
+        {
+          type: "Visit",
+          href: "https://epsy.gurkan-taner.fr",
+          icon: "website",
+        },
+      ],
+      image: "/projects/epsy.webp",
+      video: "",
     },
     {
       title: "Crypto webscrapping",
@@ -291,7 +323,7 @@ export const DATA = {
         "TailwindCSS",
       ],
       links: [],
-      image: "/projects/crypto.png",
+      image: "/projects/crypto.webp",
       video: "",
     },
     {
@@ -312,7 +344,7 @@ export const DATA = {
         "FastAPI",
       ],
       links: [],
-      image: "/projects/navify.png",
+      image: "/projects/navify.webp",
       video: "",
     },
   ],
@@ -331,7 +363,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/coding_games/puissance4.png",
+      image: "/coding_games/puissance4.webp",
       video: "",
     },
     {
@@ -348,7 +380,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/coding_games/pong.png",
+      image: "/coding_games/pong.webp",
       video: "",
     },
     {
@@ -365,7 +397,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/coding_games/space_invader.png",
+      image: "/coding_games/space_invader.webp",
       video: "",
     },
     {
@@ -382,7 +414,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/coding_games/tictactoe.png",
+      image: "/coding_games/tictactoe.webp",
       video: "",
     },
     {
@@ -399,7 +431,7 @@ export const DATA = {
           icon: "github",
         },
       ],
-      image: "/coding_games/snake.png",
+      image: "/coding_games/snake.webp",
       video: "",
     },
   ],
