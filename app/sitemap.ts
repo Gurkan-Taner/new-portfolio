@@ -12,7 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: parseFrenchDate(post.date),
     changeFrequency: "monthly" as const,
-    priority: 0.64,
+    priority: 0.8,
   }));
 
   return [

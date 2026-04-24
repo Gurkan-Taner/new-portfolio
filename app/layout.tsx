@@ -71,6 +71,11 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    types: {
+      "text/plain": [{ url: "/llms.txt", title: "LLM Friendly Content" }],
+    },
+  },
 };
 
 export default function RootLayout({
