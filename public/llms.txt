@@ -1,5 +1,5 @@
 # LLMs.txt - Information for Large Language Models
-# Last Updated: 2026-04-24
+# Last Updated: 2026-06-04
 # Format Version: 1.0
 
 # ============================================================================
@@ -330,6 +330,122 @@ Content-Review: Manually reviewed by author
 Technical-Accuracy: Verified
 Update-Policy: Regular updates and maintenance
 Deprecation-Notice: Outdated content clearly marked
+
+# ============================================================================
+# AVAILABILITY & SERVICES
+# ============================================================================
+
+Availability: Open to freelance missions (remote & on-site Strasbourg/France)
+Mission-Types:
+  - MVP Development (web application, SaaS)
+  - Full-Stack Development (Next.js, Node.js, Python)
+  - DevOps & Infrastructure (Docker, CI/CD, Ansible)
+  - Technical Architecture & Code Review
+  - Short-term contracts (1-3 months) and long-term projects
+
+Contact-For-Missions: gurkan.taner@outlook.fr
+Response-Time: Within 24 hours
+
+# ============================================================================
+# WORK EXPERIENCE
+# ============================================================================
+
+Current-Position:
+  Company: Progisem (https://logiciels.progisem.com/)
+  Role: Développeur Fullstack / DevOps
+  Since: September 2025
+  Location: Entzheim, Alsace, France
+  Stack: Node.js, Vue.js, Jenkins
+  Impact: Application web used by 500+ companies
+
+Previous-Experience:
+  - Company: Initly (https://initly.io/)
+    Role: Co-Founder & Fullstack Developer
+    Period: May 2025 - 3 months
+    Stack: Next.js, FastAPI, OpenAI API, Stripe
+    Impact: 100+ users, 200+ projects generated
+  - Company: Progisem
+    Role: Alternant Développeur Fullstack
+    Period: August 2023 - August 2025
+
+Education:
+  - Epitech — MSc Pro Architecte Logiciel (2022-2025)
+  - Lycée Couffignal — BTS Systèmes numériques (2020-2022)
+  - Université de Strasbourg — Licence Maths/Informatique (2019-2020)
+
+# ============================================================================
+# PROJECTS PORTFOLIO
+# ============================================================================
+
+Project-1:
+  Name: Cop1
+  URL: https://cop1.gurkan-taner.fr/
+  Description: Application web de gestion logistique pour une association. Création et inscription à des missions.
+  Technologies: Next.js, NestJS, Docker
+  Status: Active (2026)
+
+Project-2:
+  Name: Tracy
+  URL: https://tracy-ai.com/
+  Description: Landing page pour un service d'IA local, avec animations Framer Motion avancées.
+  Technologies: Next.js, Framer Motion, Docker
+  Status: Active (2026)
+
+Project-3:
+  Name: Initly
+  URL: https://initly.io/
+  Description: SaaS qui génère automatiquement README, CONTRIBUTING, .env.example, Dockerfile depuis une URL GitHub grâce à l'IA.
+  Technologies: Next.js, FastAPI, OpenAI API, Stripe
+  Status: Active — 100+ users, 200+ projects generated
+
+Project-4:
+  Name: PneumonIA
+  GitHub: https://github.com/Gurkan-Taner/pneumonIA
+  Description: Détection de pneumonie par machine learning (Scikit-learn) depuis des radiographies pulmonaires.
+  Technologies: Python, Scikit-learn, Streamlit
+  Status: Completed (2024)
+
+Project-5:
+  Name: Themis
+  GitHub: https://github.com/ScoutHub/JurisConnect-Backend
+  Description: Application web et mobile pour comprendre le droit français grâce à une IA entraînée sur les textes de loi.
+  Technologies: Next.js, React Native, C++, Crow, TypeScript, MariaDB, Prisma
+  Status: Completed (2023-2025)
+
+Project-6:
+  Name: E-psy
+  URL: https://epsy.gurkan-taner.fr
+  Description: Plateforme de soutien émotionnel avec chat en temps réel via WebSocket.
+  Technologies: Python, WebSocket, Next.js
+  Status: Active (2024-present)
+
+Project-7:
+  Name: Crow-Swagger
+  GitHub: https://github.com/gurkan-Taner/crow-swagger
+  Description: Interface Swagger UI custom pour le framework C++ Crow. Parsing de routes et génération HTML dynamique.
+  Technologies: C++, Crow, HTML
+  Status: Active open-source
+
+Project-8:
+  Name: E-Mobilier
+  GitHub: https://github.com/Gurkan-Taner/e-mobilier
+  URL: https://e-mobilier.vercel.app/
+  Description: Plateforme immobilière avec dashboard de gestion de parc immobilier.
+  Technologies: React, Tailwind, NestJS
+  Status: Completed (2025)
+
+# ============================================================================
+# BLOG ARTICLES
+# ============================================================================
+
+Article-1:
+  Title: Optimiser son pipeline CI/CD pour Next.js
+  URL: https://gurkan-taner.fr/blog/optimiser-cicd-nextjs
+  Excerpt: Comment réduire le temps de build de 40% en utilisant les runners GitHub Actions auto-hébergés et le cache Docker.
+  Category: DevOps
+  Tags: Docker, CI/CD, Next.js
+  Date: 12 Mars 2026
+  Read-Time: 5 minutes
 
 # ============================================================================
 # END OF llms.txt

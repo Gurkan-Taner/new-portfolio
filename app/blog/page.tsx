@@ -1,8 +1,32 @@
+import { Metadata } from "next";
 import { SectionTitle } from "@/components/section-title";
 import { BlogCard } from "@/components/blog/blog-card";
 import { DATA_BLOG } from "@/data/blog-posts";
 import LenisScroller from "@/components/lenis-scroller";
 import Footer from "@/components/sections/footer";
+import { DATA } from "@/data/resume";
+
+export const metadata: Metadata = {
+  title: "Journal Technique",
+  description:
+    "Articles techniques sur le développement web, DevOps, Next.js, TypeScript et la culture engineering par Gurkan Taner.",
+  alternates: {
+    canonical: `${DATA.url}/blog`,
+  },
+  openGraph: {
+    title: "Journal Technique — Gurkan Taner",
+    description:
+      "Articles techniques sur le développement web, DevOps, Next.js, TypeScript et la culture engineering.",
+    url: `${DATA.url}/blog`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Journal Technique — Gurkan Taner",
+    description:
+      "Articles techniques sur le développement web, DevOps, Next.js, TypeScript.",
+  },
+};
 
 export default function BlogPage() {
   return (

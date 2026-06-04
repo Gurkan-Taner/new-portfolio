@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Software Engineer / DevOps",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#000",
+    background_color: "#050505",
+    theme_color: "#050505",
     icons: [
       {
         src: "/favicon.ico",
