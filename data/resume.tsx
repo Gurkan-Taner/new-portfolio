@@ -8,7 +8,7 @@ export const DATA = {
   location: "Strasbourg, FR",
   locationLink: "https://www.google.com/maps/place/strasbourg",
   description:
-    "Gurkan Taner - Software Engineer Freelance à Strasbourg. Expert en développement fullstack.",
+    "Software engineer freelance à Strasbourg : je conçois et développe des MVP et des SaaS en Next.js, NestJS et Python, de l'architecture au déploiement Docker.",
   jobTitle: "Software Engineer Freelance",
   additionalKeywords:
     "développeur strasbourg, freelance développeur, expert nextjs, software engineer france, développeur, expert nestjs, expert python, software engineer, devops",
@@ -62,6 +62,28 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "Odygo",
+      href: "https://www.odygo.fr/",
+      badges: [],
+      location: "Remote",
+      title: "Développeur mobile (Freelance)",
+      start: "Juillet 2026",
+      end: "Août 2026",
+      description:
+        "Migration de l'application mobile de l'auto-école vers une Clean Architecture en Flutter, pour séparer clairement les couches métier, données et présentation. Implémentation du nouveau design de l'application.",
+    },
+    {
+      company: "PPC Assist",
+      href: "https://ppcassist.com/",
+      badges: [],
+      location: "Remote",
+      title: "Software Engineer IA / DevOps (Freelance)",
+      start: "Avril 2026",
+      end: "Aujourd'hui",
+      description:
+        "Réduction des coûts cloud par la migration de l'infrastructure vers du self-hosted. Conception de Kong, un agent IA qui gère le compte publicitaire Amazon du client et agit de manière proactive (analyses, recommandations et optimisations automatiques). Développement de nombreuses autres fonctionnalités de l'application.",
+    },
     {
       company: "Progisem",
       href: "https://logiciels.progisem.com/",
@@ -117,29 +139,44 @@ export const DATA = {
       start: "2022",
       end: "2025",
     },
-    {
-      school: "Lycée Couffignal",
-      href: "https://lyc-couffignal-strasbourg.site.ac-strasbourg.fr/",
-      degree: "BTS Systèmes numériques option Informatique et Réseaux",
-      start: "2020",
-      end: "2022",
-    },
-    {
-      school: "Université de Strasbourg",
-      href: "https://www.unistra.fr/",
-      degree: "Licence en Mathématiques / Informatique",
-      start: "2019",
-      end: "2020",
-    },
-    {
-      school: "Lycée Kléber",
-      href: "https://lycee-kleber.com.fr/",
-      degree: "Bac scientifique option Sciences de l’ingénieur",
-      start: "2017",
-      end: "2019",
-    },
   ],
   projects: [
+    {
+      title: "PPC Assist",
+      href: "https://ppcassist.com/",
+      dates: "Avril 2026 - Aujourd'hui",
+      active: true,
+      description:
+        "SaaS de gestion des publicités Amazon (PPC). Migration de l'infrastructure cloud vers du self-hosted pour réduire les coûts, et développement de Kong, un agent IA proactif qui pilote le compte publicitaire du client.",
+      technologies: ["Agent IA", "DevOps", "Self-hosting", "Docker"],
+      links: [
+        {
+          type: "Visit",
+          href: "https://ppcassist.com/",
+          icon: "website",
+        },
+      ],
+      image: "/projects/ppcassist.webp",
+      video: "",
+    },
+    {
+      title: "Odygo",
+      href: "https://www.odygo.fr/",
+      dates: "Juillet 2026 - Août 2026",
+      active: true,
+      description:
+        "Application mobile d'une auto-école strasbourgeoise qui garantit une date d'examen. Migration vers une Clean Architecture et implémentation du nouveau design en Flutter.",
+      technologies: ["Flutter", "Dart", "Clean Architecture"],
+      links: [
+        {
+          type: "Visit",
+          href: "https://www.odygo.fr/",
+          icon: "website",
+        },
+      ],
+      image: "/projects/odygo.webp",
+      video: "",
+    },
     {
       title: "Cop1",
       href: "",
@@ -194,6 +231,7 @@ export const DATA = {
     {
       title: "Initly",
       href: "https://initly.io/",
+      dates: "Mai 2025",
       active: true,
       description:
         "SaaS qui permet de clone un repo GitHub et générer un README complet basé sur l'architecture du projet, un fichier CONTRIBUTING basé sur les commits, .env.example, Dockerfile et GitHub Actions.",

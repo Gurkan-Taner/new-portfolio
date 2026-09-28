@@ -28,6 +28,8 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: [...post.tags, post.category],
+    authors: [{ name: DATA.name, url: DATA.url }],
     alternates: {
       canonical: postUrl,
     },
@@ -37,8 +39,10 @@ export async function generateMetadata({
       url: postUrl,
       type: "article",
       publishedTime: parseFrenchDate(post.date).toISOString(),
+      modifiedTime: parseFrenchDate(post.date).toISOString(),
+      section: post.category,
       tags: [...post.tags],
-      authors: [DATA.name],
+      authors: [DATA.url],
     },
     twitter: {
       card: "summary_large_image",
@@ -60,15 +64,28 @@ export default function BlogPost({
 
   const postUrl = `${DATA.url}/blog/${post.slug}`;
 
+  const published = parseFrenchDate(post.date).toISOString();
+  const words = post.content
+    .map((c) => c.text)
+    .join(" ")
+    .split(/\s+/).length;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
+    "@id": `${postUrl}#article`,
     headline: post.title,
     description: post.excerpt,
     url: postUrl,
-    datePublished: parseFrenchDate(post.date).toISOString(),
-    author: { "@id": `${DATA.url}/#person` },
+    mainEntityOfPage: postUrl,
+    image: `${postUrl}/opengraph-image`,
+    datePublished: published,
+    dateModified: published,
+    author: { "@type": "Person", "@id": `${DATA.url}/#person`, name: DATA.name, url: DATA.url },
     publisher: { "@id": `${DATA.url}/#person` },
+    isPartOf: { "@id": `${DATA.url}/#website` },
+    articleSection: post.category,
+    wordCount: words,
     keywords: post.tags.join(", "),
     timeRequired: `PT${parseInt(post.readTime)}M`,
     inLanguage: "fr-FR",

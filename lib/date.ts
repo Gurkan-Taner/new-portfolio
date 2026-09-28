@@ -21,5 +21,6 @@ export function parseFrenchDate(dateStr: string): Date {
   const month = months[parts[1]];
   const year = parseInt(parts[2], 10);
 
-  return new Date(year, month, day);
+  // En UTC : toISOString() ne doit pas décaler la date d'un jour.
+  return new Date(Date.UTC(year, month, day));
 }

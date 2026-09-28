@@ -1,123 +1,93 @@
 "use client";
 
-import { Calendar, ArrowLeft, Clock } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import LenisScroller from "@/components/lenis-scroller";
-import Footer from "@/components/sections/footer";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+import Footer from "@/components/tui/footer";
+import Window from "@/components/tui/window";
 import { BlogPost } from "@/data/blog-posts";
+import { DATA } from "@/data/resume";
+import { parseFrenchDate } from "@/lib/date";
+import { isTyping } from "@/lib/sections";
 
 export default function BlogPostView({ post }: { post: BlogPost }) {
+  const router = useRouter();
+
+  // Comme dans less : « q » pour quitter la lecture.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "q" && !isTyping(e)) router.push("/blog");
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [router]);
+
   return (
-    <LenisScroller>
-      <div className="min-h-screen bg-[#050505] text-white selection:bg-blue-500/30 selection:text-blue-200">
-        <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-blue-600/5 to-transparent blur-[120px]" />
+    <main className="mx-auto max-w-[56rem] px-4 md:px-8 pt-16 md:pt-20 flex flex-col gap-16">
+      <Window as="article" title={`less ${post.slug}.md`} titleAs="p">
+        <Link
+          href="/blog"
+          aria-keyshortcuts="q"
+          className="ui text-xl text-fg-dim hover:text-cyan inline-block mb-8"
+        >
+          ← Retour au blog
+        </Link>
+
+        <header className="mb-10">
+          <p className="ui text-xl text-cyan mb-2">
+            {post.category},{" "}
+            <time dateTime={parseFrenchDate(post.date).toISOString().slice(0, 10)}>
+              {post.date}
+            </time>
+            , {post.readTime} de lecture, par{" "}
+            <Link href="/" rel="author" className="underline underline-offset-4 hover:text-yellow">
+              {DATA.name}
+            </Link>
+          </p>
+          <h1 className="ui text-5xl md:text-6xl leading-[0.95] text-yellow text-balance">
+            {post.title}
+          </h1>
+        </header>
+
+        <div className="flex flex-col gap-6 max-w-[68ch] text-base leading-[1.75]">
+          {post.content.map((item, i) => {
+            if (item.type === "heading") {
+              return (
+                <h2 key={i} className="ui text-4xl leading-none text-yellow mt-8">
+                  <span className="text-fg-dim" aria-hidden="true">
+                    ##{" "}
+                  </span>
+                  {item.text}
+                </h2>
+              );
+            }
+            if (item.type === "quote") {
+              return (
+                <blockquote
+                  key={i}
+                  className="border-l-4 border-cyan pl-5 py-1 text-cyan"
+                >
+                  {item.text}
+                </blockquote>
+              );
+            }
+            return <p key={i}>{item.text}</p>;
+          })}
         </div>
 
-        <main className="container mx-auto px-6 relative z-10 pt-32 pb-24">
-          <Link
-            href="/blog"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-white transition-colors mb-12"
-          >
-            <ArrowLeft
-              size={16}
-              className="group-hover:-translate-x-1 transition-transform"
-            />
-            Retour aux articles
-          </Link>
-
-          <article className="max-w-3xl mx-auto">
-            <header className="mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="flex items-center gap-4 mb-6"
-              >
-                <span className="text-[10px] uppercase tracking-[0.2em] font-black px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                  {post.category}
-                </span>
-                <span className="text-xs font-medium text-gray-500 flex items-center gap-2">
-                  <Clock size={14} /> {post.readTime} de lecture
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-bold leading-[1.1] mb-8 bg-gradient-to-r from-white via-white to-white/50 bg-clip-text text-transparent"
-              >
-                {post.title}
-              </motion.h1>
-
-              <div className="flex items-center justify-between py-6 border-y border-white/5 text-[11px] font-bold text-gray-500 uppercase">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                    G
-                  </div>
-                  <span className="text-white">Gürkan</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar size={14} className="text-blue-500" />
-                  {post.date}
-                </div>
-              </div>
-            </header>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="space-y-8"
-            >
-              {post.content.map((item, index) => {
-                if (item.type === "heading") {
-                  return (
-                    <h2
-                      key={index}
-                      className="text-2xl md:text-3xl font-bold text-white mt-12 mb-4"
-                    >
-                      {item.text}
-                    </h2>
-                  );
-                }
-                if (item.type === "quote") {
-                  return (
-                    <blockquote
-                      key={index}
-                      className="my-10 p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 text-white font-medium italic relative overflow-hidden"
-                    >
-                      <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
-                      "{item.text}"
-                    </blockquote>
-                  );
-                }
-                return (
-                  <p
-                    key={index}
-                    className="text-gray-400 leading-loose text-lg"
-                  >
-                    {item.text}
-                  </p>
-                );
-              })}
-            </motion.div>
-
-            <footer className="mt-20 pt-10 border-t border-white/5 flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-[10px] font-bold text-gray-500 border border-white/10 px-3 py-1 rounded-full"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </footer>
-          </article>
-        </main>
-        <Footer />
-      </div>
-    </LenisScroller>
+        <footer className="mt-12 pt-6 border-t-2 border-fg-dim flex flex-wrap items-center justify-between gap-4">
+          <ul className="flex flex-wrap gap-x-4 ui text-xl text-fg-dim">
+            {post.tags.map((tag) => (
+              <li key={tag}>#{tag}</li>
+            ))}
+          </ul>
+          <p className="ui text-xl bg-fg text-ink px-2" aria-hidden="true">
+            (END) q pour revenir au blog
+          </p>
+        </footer>
+      </Window>
+      <Footer />
+    </main>
   );
 }

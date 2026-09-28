@@ -3,31 +3,39 @@ import { DATA } from "@/data/resume";
 import { DATA_BLOG } from "@/data/blog-posts";
 import { parseFrenchDate } from "@/lib/date";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = DATA.url.endsWith("/") ? DATA.url.slice(0, -1) : DATA.url;
-
-  const posts = DATA_BLOG;
-
-  const blogUrls = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = DATA.url.replace(/\/$/, "");
+  const posts = DATA_BLOG.map((post) => ({
+    url: `${base}/blog/${post.slug}`,
     lastModified: parseFrenchDate(post.date),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+    changeFrequency: "yearly" as const,
+    priority: 0.7,
+    images: [`${base}/blog/${post.slug}/opengraph-image`],
   }));
+  const latestPost = posts.reduce<Date | undefined>(
+    (d, p) => (!d || p.lastModified > d ? p.lastModified : d),
+    undefined
+  );
+
+  const projectImages = DATA.projects
+    .map((p) => p.image)
+    .filter(Boolean)
+    .map((src) => `${base}${src}`);
 
   return [
     {
-      url: baseUrl,
+      url: base,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
+      images: [`${base}/me.png`, ...projectImages],
     },
     {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      url: `${base}/blog`,
+      lastModified: latestPost ?? new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    ...blogUrls,
+    ...posts,
   ];
 }
